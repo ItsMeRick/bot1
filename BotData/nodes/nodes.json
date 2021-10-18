@@ -1,0 +1,1242 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 148,
+      "y": 188
+    },
+    {
+      "type": "command",
+      "name": "info",
+      "guid": "2224944a-561a-4fa1-824b-2f31ea37c836",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5053a44d-4a5e-460a-974d-da0cc07aac7c"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 149,
+      "y": 325
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "!help",
+          "value": "Shows this menu",
+          "inline": "true"
+        },
+        {
+          "name": "!info",
+          "value": "Shows some info",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 345,
+      "y": 182,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "1FFF57",
+        "Help Menu",
+        "",
+        "Bot Name Here",
+        "",
+        "",
+        "This is the embed description, replace this with some info about your bot!",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "show info",
+      "guid": "5053a44d-4a5e-460a-974d-da0cc07aac7c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2224944a-561a-4fa1-824b-2f31ea37c836"
+        }
+      ],
+      "x": 360,
+      "y": 324,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.DefaultChannel.id}",
+        "Command Author: ${dbsVars.CommandAuthor.displayName}\nTagged author: <@${dbsVars.CommandAuthor.id}>\nYou can insert more values by clicking the \"Insert Variable\" button next to this field!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": []
+    },
+    {
+      "type": "command",
+      "name": "ts",
+      "guid": "82b6017d-429e-4492-aca8-65ac4ba1e133",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "1155bb5e-0eac-4e13-8118-49ebab3f0802"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 33,
+      "y": 549
+    },
+    {
+      "type": "response",
+      "name": "pogger",
+      "guid": "1155bb5e-0eac-4e13-8118-49ebab3f0802",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "82b6017d-429e-4492-aca8-65ac4ba1e133"
+        }
+      ],
+      "x": 214,
+      "y": 586,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "select options dow",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [
+        {
+          "rowtype": "select",
+          "customid": "select1",
+          "placeholdertext": "Make a Selection",
+          "selectoptions": [
+            {
+              "label": "test",
+              "value": "selectop1",
+              "description": "its a option",
+              "emoji": "",
+              "defaultoption": false
+            },
+            {
+              "label": "test2",
+              "value": "selectop2",
+              "description": "its a option",
+              "emoji": "",
+              "defaultoption": false
+            }
+          ]
+        }
+      ],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "report",
+      "guid": "c8aef197-75e8-4357-80f9-ee3aa1552844",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "2405ca2d-9d0a-4aab-bdb5-42e4ab139660"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 80,
+      "y": 964,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "1234",
+      "guid": "2405ca2d-9d0a-4aab-bdb5-42e4ab139660",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "ticket name",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "4193e6b6-59e4-4c0d-81de-07658049eb6e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c8aef197-75e8-4357-80f9-ee3aa1552844"
+        }
+      ],
+      "x": 354,
+      "y": 1001,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "474DFF",
+        "main",
+        "",
+        "report",
+        "",
+        "",
+        "REPORT:user\nBUG:bot,server,glitch",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "ticket name",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [
+        {
+          "rowtype": "select",
+          "customid": "reportmain",
+          "placeholdertext": "make a choice",
+          "selectoptions": [
+            {
+              "label": "REPORT",
+              "value": "report",
+              "description": "REPORT",
+              "emoji": "",
+              "defaultoption": false
+            },
+            {
+              "label": "BUG",
+              "value": "BUG",
+              "description": "BUG",
+              "emoji": "",
+              "defaultoption": false
+            }
+          ]
+        }
+      ],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "123",
+      "guid": "4193e6b6-59e4-4c0d-81de-07658049eb6e",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "txt",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2405ca2d-9d0a-4aab-bdb5-42e4ab139660"
+        }
+      ],
+      "x": 802,
+      "y": 896,
+      "rtype": "Channel Action",
+      "rsubtype": "Create Channel",
+      "formdata": [
+        "${tempVars.ticket name.content}",
+        "tickets",
+        "make ticket",
+        "Text",
+        "txt",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "chancategory",
+        "reason",
+        "channeltype",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "status",
+      "guid": "a7d4f4f8-3b60-4fea-a665-417b000aadfc",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "cc72054b-593c-4710-944d-a4a0dc64042c"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 918,
+      "y": 604,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "1111",
+      "guid": "14b6c3c8-63cf-4616-ba2a-4b7e5145ba8c",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "the description has been set to ",
+          "value": "${serverVars.statsus bot}",
+          "inline": "true"
+        }
+      ],
+      "saveToVariable": "test",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f3934489-8eba-435d-983f-9393ffbc52a7"
+        }
+      ],
+      "x": 2072,
+      "y": 441,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "131975",
+        "test",
+        "",
+        "",
+        "",
+        "",
+        "description ",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "test",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "ban",
+      "guid": "4be9fa4e-1c85-40da-b328-8881d91c6cb4",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "2c0df8d5-5c12-43b6-b168-16a4313d705b"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 73,
+      "y": 1275,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "get user",
+      "guid": "2c0df8d5-5c12-43b6-b168-16a4313d705b",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "get_user_ban",
+      "saveToVariableType": "global",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d5f2de75-2234-439d-8ba1-9e3d792122c9"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4be9fa4e-1c85-40da-b328-8881d91c6cb4"
+        }
+      ],
+      "x": 263,
+      "y": 1259,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "get_user_ban",
+        "Number",
+        "global",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "rea bot",
+      "guid": "584706ac-e6fb-4f09-aa58-173b64d36aed",
+      "reactionFields": [
+        "✔️",
+        "❌"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "✔️",
+          "connections": [
+            "84857673-e31b-4474-8464-d1d851081236"
+          ]
+        },
+        {
+          "label": "❌",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "8fb88ebf-bff2-4174-9071-bbf818626b66"
+        }
+      ],
+      "x": 1070,
+      "y": 1384,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.main 2.id}",
+        "60",
+        "anser user ban",
+        "the banner",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "chek perms",
+      "guid": "84857673-e31b-4474-8464-d1d851081236",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "has perms",
+          "connections": [
+            "0ea5dee2-7517-4ccd-b804-cd848b749644"
+          ]
+        },
+        {
+          "label": "doesn't have perms",
+          "connections": [
+            "0b59f660-1fc4-4010-9670-e9ea65316a42"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "584706ac-e6fb-4f09-aa58-173b64d36aed"
+        }
+      ],
+      "x": 1003,
+      "y": 1170,
+      "rtype": "User Action",
+      "rsubtype": "Check User Permissions",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        [
+          "ADMINISTRATOR"
+        ]
+      ],
+      "formnames": [
+        "user",
+        "permissions"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "do ban",
+      "guid": "4f12363c-e748-4cc8-a050-0976b3f8d7c7",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "84857673-e31b-4474-8464-d1d851081236"
+        }
+      ],
+      "x": 1004,
+      "y": 1066,
+      "rtype": "User Action",
+      "rsubtype": "Ban User",
+      "formdata": [
+        "${globalVars.get_user_ban}",
+        "no one${globalVars.reason}",
+        "${globalVars.time}"
+      ],
+      "formnames": [
+        "user",
+        "reason",
+        "days"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "reason",
+      "guid": "d5f2de75-2234-439d-8ba1-9e3d792122c9",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "reason",
+      "saveToVariableType": "global",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "59100f12-e5a9-48ce-8831-73d14b597d05"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2c0df8d5-5c12-43b6-b168-16a4313d705b"
+        }
+      ],
+      "x": 428,
+      "y": 1190,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "reason",
+        "Number",
+        "global",
+        "3"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "time ban",
+      "guid": "59100f12-e5a9-48ce-8831-73d14b597d05",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "time",
+      "saveToVariableType": "global",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c42f9b6a-24ce-45ca-9696-a88021c59789"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d5f2de75-2234-439d-8ba1-9e3d792122c9"
+        }
+      ],
+      "x": 451,
+      "y": 1300,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "time",
+        "Number",
+        "global",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "end ban",
+      "guid": "6602d8c2-045d-44ac-9660-285cf1ad3f3e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0ea5dee2-7517-4ccd-b804-cd848b749644"
+        }
+      ],
+      "x": 1214,
+      "y": 1010,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "BAN",
+        "",
+        "",
+        "",
+        "",
+        "<@${dbsVars.CommandAuthor.id}> ${globalVars.get_user_ban} has been banned  fore ${serverVars.reason} and fore ${serverVars.time} day's",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "say info ban",
+      "guid": "c42f9b6a-24ce-45ca-9696-a88021c59789",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "main_ban ",
+      "saveToVariableType": "server",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "8fb88ebf-bff2-4174-9071-bbf818626b66"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "59100f12-e5a9-48ce-8831-73d14b597d05"
+        }
+      ],
+      "x": 639,
+      "y": 1283,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "BAN",
+        "",
+        "",
+        "",
+        "",
+        "ban${serverVars.get_user_ban} fore ${serverVars.reason} time ${serverVars.time}",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "main_ban ",
+        "server"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "wait ban",
+      "guid": "4fc9e47c-03b2-4d12-a526-69cc33f86b33",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c42f9b6a-24ce-45ca-9696-a88021c59789"
+        }
+      ],
+      "x": 853,
+      "y": 1445,
+      "rtype": "Control",
+      "rsubtype": "Wait",
+      "formdata": [
+        "4",
+        "seconds"
+      ],
+      "formnames": [
+        "waitduration",
+        "unit"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "store status",
+      "guid": "cc72054b-593c-4710-944d-a4a0dc64042c",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "statsus bot",
+      "saveToVariableType": "server",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d66c969a-f4ff-43f3-b1c4-bbb192b72d55"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a7d4f4f8-3b60-4fea-a665-417b000aadfc"
+        }
+      ],
+      "x": 1283,
+      "y": 556,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "statsus bot",
+        "Number",
+        "server",
+        "0"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "set bot",
+      "guid": "f3934489-8eba-435d-983f-9393ffbc52a7",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "14b6c3c8-63cf-4616-ba2a-4b7e5145ba8c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e889c628-a693-4b7c-b848-b5bbc509ff9d"
+        }
+      ],
+      "x": 2007,
+      "y": 270,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "${serverVars.statsus bot}",
+        "PLAYING",
+        ""
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "mess",
+      "guid": "8fb88ebf-bff2-4174-9071-bbf818626b66",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "main 2",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "584706ac-e6fb-4f09-aa58-173b64d36aed"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c42f9b6a-24ce-45ca-9696-a88021c59789"
+        }
+      ],
+      "x": 872,
+      "y": 1303,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "ban?",
+        "main 2",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "no ban perms",
+      "guid": "0b59f660-1fc4-4010-9670-e9ea65316a42",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "84857673-e31b-4474-8464-d1d851081236"
+        }
+      ],
+      "x": 1247,
+      "y": 1218,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "no perms to ban",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "kick user",
+      "guid": "0ea5dee2-7517-4ccd-b804-cd848b749644",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6602d8c2-045d-44ac-9660-285cf1ad3f3e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "84857673-e31b-4474-8464-d1d851081236"
+        }
+      ],
+      "x": 1010,
+      "y": 966,
+      "rtype": "User Action",
+      "rsubtype": "Kick User",
+      "formdata": [
+        "${globalVars.get_user_ban}",
+        "${globalVars.reason}"
+      ],
+      "formnames": [
+        "user",
+        "reason"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "1111_1",
+      "guid": "d66c969a-f4ff-43f3-b1c4-bbb192b72d55",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "do you want that the description has been set to ",
+          "value": "${serverVars.statsus bot}",
+          "inline": "true"
+        }
+      ],
+      "saveToVariable": "rea reaction stat",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b4a3f1a0-cb4c-47b4-bad6-006b91dc8b01"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "cc72054b-593c-4710-944d-a4a0dc64042c"
+        }
+      ],
+      "x": 1317,
+      "y": 352,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "131975",
+        "status",
+        "",
+        "",
+        "",
+        "",
+        "description ",
+        "",
+        "",
+        "",
+        "BOOL_TRUE@@",
+        "rea reaction stat",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sat set mes 2",
+      "guid": "b4a3f1a0-cb4c-47b4-bad6-006b91dc8b01",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "reac lit to stat",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "e889c628-a693-4b7c-b848-b5bbc509ff9d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d66c969a-f4ff-43f3-b1c4-bbb192b72d55"
+        }
+      ],
+      "x": 1488,
+      "y": 454,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "do you want?",
+        "reac lit to stat",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "react sat_1",
+      "guid": "e889c628-a693-4b7c-b848-b5bbc509ff9d",
+      "reactionFields": [
+        "✔️",
+        "❌"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "✔️",
+          "connections": [
+            "f3934489-8eba-435d-983f-9393ffbc52a7"
+          ]
+        },
+        {
+          "label": "❌",
+          "connections": [
+            "ea359506-da1d-4ad2-9dea-6090abbc490f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b4a3f1a0-cb4c-47b4-bad6-006b91dc8b01"
+        }
+      ],
+      "x": 1613,
+      "y": 254,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.reac lit to stat.id}",
+        "10",
+        "the user rea stat",
+        " the userrea stat",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "canc set stat",
+      "guid": "ea359506-da1d-4ad2-9dea-6090abbc490f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e889c628-a693-4b7c-b848-b5bbc509ff9d"
+        }
+      ],
+      "x": 1830,
+      "y": 487,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "ok canceld",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}

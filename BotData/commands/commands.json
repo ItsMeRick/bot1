@@ -1,0 +1,403 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "!help",
+              "value": "Shows this menu",
+              "inline": "true"
+            },
+            {
+              "name": "!info",
+              "value": "Shows some info",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "1FFF57",
+          "title": "Help Menu",
+          "url": "",
+          "authorname": "Bot Name Here",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "This is the embed description, replace this with some info about your bot!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "info",
+      "actions": [
+        {
+          "name": "show info",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.DefaultChannel.id}",
+          "messagetext": "Command Author: ${dbsVars.CommandAuthor.displayName}\nTagged author: <@${dbsVars.CommandAuthor.id}>\nYou can insert more values by clicking the \"Insert Variable\" button next to this field!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ts",
+      "actions": [
+        {
+          "name": "pogger",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [
+            {
+              "rowtype": "select",
+              "customid": "select1",
+              "placeholdertext": "Make a Selection",
+              "selectoptions": [
+                {
+                  "label": "test",
+                  "value": "selectop1",
+                  "description": "its a option",
+                  "emoji": "",
+                  "defaultoption": false
+                },
+                {
+                  "label": "test2",
+                  "value": "selectop2",
+                  "description": "its a option",
+                  "emoji": "",
+                  "defaultoption": false
+                }
+              ]
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "select options dow",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "report",
+      "perms": [],
+      "actions": [
+        {
+          "name": "1234",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [
+            {
+              "rowtype": "select",
+              "customid": "reportmain",
+              "placeholdertext": "make a choice",
+              "selectoptions": [
+                {
+                  "label": "REPORT",
+                  "value": "report",
+                  "description": "REPORT",
+                  "emoji": "",
+                  "defaultoption": false
+                },
+                {
+                  "label": "BUG",
+                  "value": "BUG",
+                  "description": "BUG",
+                  "emoji": "",
+                  "defaultoption": false
+                }
+              ]
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "474DFF",
+          "title": "main",
+          "url": "",
+          "authorname": "report",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "REPORT:user\nBUG:bot,server,glitch",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "ticket name",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "123",
+          "category": "Channel Action",
+          "type": "Create Channel",
+          "messageActionRows": [],
+          "channelname": "${tempVars.ticket name.content}",
+          "chancategory": "tickets",
+          "reason": "make ticket",
+          "channeltype": "Text",
+          "savetovariable": "txt",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "perms": [],
+      "actions": [
+        {
+          "name": "store status",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "statsus bot",
+          "vartype": "Number",
+          "savevartype": "server",
+          "param": "0"
+        },
+        {
+          "name": "1111_1",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "do you want that the description has been set to ",
+              "value": "${serverVars.statsus bot}",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "131975",
+          "title": "status",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "description ",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "rea reaction stat",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "sat set mes 2",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "do you want?",
+          "savetovariable": "reac lit to stat",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "react sat_1",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "✔️": [
+              {
+                "name": "set bot",
+                "category": "Bot Action",
+                "type": "Set Bot Activity",
+                "messageActionRows": [],
+                "activityname": "${serverVars.statsus bot}",
+                "activitytype": "PLAYING",
+                "streamurl": ""
+              },
+              {
+                "name": "1111",
+                "category": "Message",
+                "type": "Send Embed",
+                "fields": [
+                  {
+                    "name": "the description has been set to ",
+                    "value": "${serverVars.statsus bot}",
+                    "inline": "true"
+                  }
+                ],
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "color": "131975",
+                "title": "test",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "description ",
+                "thumbnail": "",
+                "image": "",
+                "footer": "",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "test",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "❌": [
+              {
+                "name": "canc set stat",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "ok canceld",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "message": "${tempVars.reac lit to stat.id}",
+          "duration": "10",
+          "reactionemoji": "the user rea stat",
+          "reactionuser": " the userrea stat",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "ban",
+      "perms": [],
+      "actions": [
+        {
+          "name": "get user",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "get_user_ban",
+          "vartype": "Number",
+          "savevartype": "global",
+          "param": "1"
+        },
+        {
+          "name": "reason",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "reason",
+          "vartype": "Number",
+          "savevartype": "global",
+          "param": "3"
+        },
+        {
+          "name": "time ban",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "time",
+          "vartype": "Number",
+          "savevartype": "global",
+          "param": "2"
+        },
+        {
+          "name": "say info ban",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "BAN",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "ban${serverVars.get_user_ban} fore ${serverVars.reason} time ${serverVars.time}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "main_ban ",
+          "savetovariabletype": "server"
+        },
+        {
+          "name": "mess",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "ban?",
+          "savetovariable": "main 2",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "rea bot",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "✔️": [
+              {
+                "name": "chek perms",
+                "category": "User Action",
+                "type": "Check User Permissions",
+                "trueActions": [
+                  {
+                    "name": "kick user",
+                    "category": "User Action",
+                    "type": "Kick User",
+                    "messageActionRows": [],
+                    "user": "${globalVars.get_user_ban}",
+                    "reason": "${globalVars.reason}"
+                  },
+                  {
+                    "name": "end ban",
+                    "category": "Message",
+                    "type": "Send Embed",
+                    "messageActionRows": [],
+                    "channelname": "${dbsVars.CommandChannel.id}",
+                    "color": "FF0000",
+                    "title": "BAN",
+                    "url": "",
+                    "authorname": "",
+                    "authorimageurl": "",
+                    "authorlink": "",
+                    "description": "<@${dbsVars.CommandAuthor.id}> ${globalVars.get_user_ban} has been banned  fore ${serverVars.reason} and fore ${serverVars.time} day's",
+                    "thumbnail": "",
+                    "image": "",
+                    "footer": "",
+                    "timestamp": "BOOL_TRUE@@",
+                    "savetovariable": "",
+                    "savetovariabletype": "temp"
+                  }
+                ],
+                "falseActions": [
+                  {
+                    "name": "no ban perms",
+                    "category": "Message",
+                    "type": "Send Message",
+                    "messageActionRows": [],
+                    "channelname": "${dbsVars.CommandChannel.id}",
+                    "messagetext": "no perms to ban",
+                    "savetovariable": "",
+                    "savetovariabletype": "temp"
+                  }
+                ],
+                "messageActionRows": [],
+                "user": "${dbsVars.CommandAuthor.id}",
+                "permissions": [
+                  "ADMINISTRATOR"
+                ]
+              }
+            ],
+            "❌": []
+          },
+          "messageActionRows": [],
+          "message": "${tempVars.main 2.id}",
+          "duration": "60",
+          "reactionemoji": "anser user ban",
+          "reactionuser": "the banner",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    }
+  ]
+}
